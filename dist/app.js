@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const habitsElement = document.querySelector('.habits');
+const habitsElement = document.querySelector('#habits');
 class Habits {
     static fetchHabits() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -17,25 +17,61 @@ class Habits {
             return habits;
         });
     }
-}
-class Habit {
     static createHabit() {
         return __awaiter(this, void 0, void 0, function* () {
             let habits = yield Habits.fetchHabits();
-            console.log(habits);
-            habits.forEach(habit => {
+            habits.forEach((habit) => {
+                let habitTime = new Date(habit.time).getTime();
+                let today = new Date().getTime();
+                let oneDay = 1000 * 60 * 60 * 24;
+                let streak = Math.ceil((today - habitTime) / oneDay);
                 let habitCard = document.createElement('div');
+                let html = '';
                 habitCard.className = 'habit-card';
-                let html = `
+                console.log(habit.type);
+                if (habit.type === 'good') {
+                    habitCard.classList.add('habit-card-good');
+                    html = `
 				<img src=${habit.icon} alt="">
 				<p class="habit-name">${habit.name} </p>
-				<p class="habit-streak">You have been ${habit.name} for ${habit.streak} days</p>
+				<p class="habit-streak">You have been ${habit.name} for ${streak} days</p>
 			`;
+                }
+                else {
+                    habitCard.classList.add('habit-card-bad');
+                    html = `
+				<img src=${habit.icon} alt="">
+				<p class="habit-name">${habit.name} </p>
+				<p class="habit-streak">You have not been ${habit.name} for ${streak} days</p>`;
+                }
                 habitCard.innerHTML = html;
-                console.log(habitCard);
                 habitsElement.appendChild(habitCard);
             });
         });
     }
+    static addHabit(e) {
+        return __awaiter(this, void 0, void 0, function* () {
+            e.preventDefault();
+            const habitType = document.querySelector('#habit-select');
+            const habitName = document.querySelector('#habit-name');
+            const habitTime = document.querySelector('#habit-time');
+            const habitStartDate = new Date(habitTime.value);
+            const newHabit = {
+                name: habitName.value,
+                type: habitType.value,
+                time: habitStartDate,
+                icon: 'http://unsplash.it/200',
+            };
+            yield fetch(' http://localhost:3000/habits', {
+                method: 'POST',
+                body: JSON.stringify(newHabit),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+        });
+    }
 }
-Habit.createHabit();
+let btn = document.querySelector('button');
+btn.addEventListener('click', Habits.addHabit);
+Habits.createHabit();

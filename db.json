@@ -1,81 +1,32 @@
 {
-    "habits": [
-        {
-            "name": "drinking water",
-            "type": "good",
-            "time": "28.04",
-            "streak": 3,
-            "icon": "https://unsplash.it/200"
-        },
-        {
-            "name": "meditation",
-            "type": "good",
-            "time": "28.04",
-            "streak": 10,
-            "icon": "https://unsplash.it/200"
-        },
-        {
-            "name": "reading",
-            "type": "good",
-            "time": "28.04",
-            "streak": 20,
-            "icon": "https://unsplash.it/200"
-        },
-        {
-            "name": "writing",
-            "type": "good",
-            "time": "28.04",
-            "streak": 15,
-            "icon": "https://unsplash.it/200"
-        },
-        {
-            "name": "exercise",
-            "type": "good",
-            "time": "28.04",
-            "streak": 8,
-            "icon": "https://unsplash.it/200"
-        },
-        {
-            "name": "waking up early",
-            "type": "good",
-            "time": "28.04",
-            "streak": 30,
-            "icon": "https://unsplash.it/200"
-        },
-        {
-            "name": "spending time with loved ones",
-            "type": "good",
-            "time": "28.04",
-            "streak": 12,
-            "icon": "https://unsplash.it/200"
-        },
-        {
-            "name": "eating breakfast",
-            "type": "good",
-            "time": "28.04",
-            "streak": 25,
-            "icon": "https://unsplash.it/200"
-        },
-        {
-            "name": "limiting screen time",
-            "type": "good",
-            "time": "28.04",
-            "streak": 7,
-            "icon": "https://unsplash.it/200"
-        },
-        {
-            "name": "smoking",
-            "type": "bad",
-            "time": "28.04",
-            "streak": 7,
-            "icon": "https://unsplash.it/200"
-        },
-        {
-            "name": "binge eating",
-            "type": "bad",
-            "time": "28.04",
-            "streak": 7,
-            "icon": "https://unsplash.it/200"
-        }
-    ]
+  "habits": [
+    {
+      "name": "running",
+      "type": "good",
+      "time": "2023-03-23T00:00:00.000Z",
+      "icon": "http://unsplash.it/200",
+      "id": 1
+    },
+    {
+      "name": "smoking",
+      "type": "bad",
+      "time": "2023-03-30T00:00:00.000Z",
+      "icon": "http://unsplash.it/200",
+      "id": 2
+    },
+    {
+      "name": "procratinating",
+      "type": "bad",
+      "time": "2023-04-06T00:00:00.000Z",
+      "icon": "http://unsplash.it/200",
+      "id": 3
+    },
+    {
+      "name": "Meditating",
+      "type": "good",
+      "time": "2023-03-22T00:00:00.000Z",
+      "icon": "http://unsplash.it/200",
+      "id": 4
+    }
+  ]
 }

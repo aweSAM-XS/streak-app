@@ -13,6 +13,11 @@
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+	display: flex;
+	justify-content: center;
+}
+
 main{
 	display: flex;
 	flex-direction: column;
@@ -30,7 +35,7 @@ header {
 
 header img {
 	height: 100%;
-	width: 20%;
+	/* width: 20%; */
 }
 
 header p {
@@ -54,4 +59,51 @@ form button {
 	background: var(--dark-blue);
 	color: white;
 	font-weight: 900;
+}
+
+#habits {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+@media  (min-width: 480px) {
+	main {
+		width: 65%;
+	}
+	header {
+		justify-content: space-between;
+		width: 100%;
+	}
+}
+
+.habit-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 2rem;
+	padding: 2rem;
+	max-width: 300px;
+	background: var(--green);
+	border-radius: .5rem;
+}
+
+.habit-card img {
+	border-radius: 50%;
+	width: 50%;
+}
+
+.habit-name {
+	text-transform: capitalize;
+	font-size: 1.5rem;
+
+}
+
+.habit-card-good {
+	background: var(--yellow);
+}
+.habit-card-bad {
+	background: var(--green);
 }

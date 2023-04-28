@@ -7,7 +7,7 @@
 	<title>STREAKS</title>
 	<link rel="shortcut icon" href="./images/habits.png" type="image/x-icon">
 	<link rel="stylesheet" href="style.css">
-	<script src="./dist/app.js"></script>
+	<script src="./dist/app.js" defer></script>
 </head>
 <body>
 	<main>
@@ -25,11 +25,11 @@
 			<label for="habit-name">Habit name</label>
 			<input type="text" id="habit-name">
 			<label for="habit-time">When did you start/stop?</label>
-			<input type="text" id="habit-time">
+			<input type="date" id="habit-time">
 			<button>Track Habit</button>
 		</form>
-		<div class="habits">
-			<h3>Your Habits</h3>
+		<h3>Your Habits</h3>
+		<div id="habits">
 		</div>
 	</main>
 </body>
