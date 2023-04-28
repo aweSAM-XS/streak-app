@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>STREAKS</title>
+	<link rel="shortcut icon" href="./images/habits.png" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+	<script src="./dist/app.js"></script>
+</head>
+<body>
+	<main>
+		<header>
+			<img src="./images/habits.png" alt="logo">
+			<p>Let's Nduthis</p>
+		</header>
+		<form>
+			<h3>Add A Habit to Track</h3>
+			<label for="habit-select">Type of habit</label>
+			<select name="habit" id="habit-select">
+				<option value="good">Good</option>
+				<option value="bad">Bad</option>
+			</select>
+			<label for="habit-name">Habit name</label>
+			<input type="text" id="habit-name">
+			<label for="habit-time">When did you start/stop?</label>
+			<input type="text" id="habit-time">
+			<button>Track Habit</button>
+		</form>
+		<div class="habits">
+			<h3>Your Habits</h3>
+		</div>
+	</main>
+</body>
+</html>
